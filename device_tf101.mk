@@ -31,7 +31,6 @@ endif
 # Files needed for boot image
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-    $(LOCAL_PATH)/ramdisk/init:root/init\
     $(LOCAL_PATH)/ramdisk/init.ventana.rc:root/init.ventana.rc\
     $(LOCAL_PATH)/ramdisk/init.ventana.usb.rc:root/init.ventana.usb.rc \
     $(LOCAL_PATH)/ramdisk/ueventd.ventana.rc:root/ueventd.ventana.rc
