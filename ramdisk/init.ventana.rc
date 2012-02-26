@@ -12,6 +12,12 @@ on early-init
     # create directory for mounting usb drives
     mkdir /Removable 0755 media_rw media_rw
 
+    # make the pathes for the external media mounts
+    mkdir /Removable/MicroSD 0666 system system
+    mkdir /Removable/USBdisk1 0666 system system
+    mkdir /Removable/USBdisk2 0666 system system
+    mkdir /Removable/SD 0666 system system
+
 on fs
     mount ext4 /dev/block/mmcblk0p1 /system wait ro
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
