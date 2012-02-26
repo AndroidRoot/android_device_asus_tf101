@@ -21,11 +21,6 @@
      for different hardware and product builds. -->
 <resources>
 
-    <!-- This device is not "voice capable"; it's data-only. -->
-    <bool name="config_voice_capable">false</bool>
-
-    <bool name="config_bypass_keyguard_if_slider_open">true</bool>
-
     <bool name="config_showNavigationBar">false</bool>
 
     <bool name="config_batterySdCardAccessibility">true</bool>
@@ -38,10 +33,16 @@
 
     <bool name="config_animateScreenLights">true</bool>
 
-    <string-array translatable="false" name="networkAttributes">
-        <item>"wifi,1,1,2,-1,true"</item>
-        <item>"bluetooth,7,7,0,-1,true"</item>
-        <item>"wifi_p2p,13,1,0,-1,true"</item>
+    <string-array name="networkAttributes">
+        <item>wifi,1,1,3,-1,true</item>
+        <item>mobile,0,0,0,-1,false</item>
+        <item>mobile_mms,2,0,5,60000,false</item>
+        <item>mobile_supl,3,0,5,60000,false</item>
+        <item>bluetooth,7,7,2,-1,true</item>
+        <item>mobile_hipri,5,0,6,60000,false</item>
+        <item>ethernet,9,9,4,-1,true</item>
+        <item>bt_dun,14,14,2,-1,true</item>
+        <item>wifi_p2p,13,1,0,-1,true</item>
     </string-array>
 
     <bool name="config_automatic_brightness_available">true</bool>
@@ -57,9 +58,6 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>10</item>
-        <item>50</item>
-        <item>100</item>
         <item>200</item>
         <item>300</item>
         <item>400</item>
@@ -69,11 +67,6 @@
         <item>900</item>
         <item>1100</item>
         <item>1400</item>
-        <item>1700</item>
-        <item>2100</item>
-        <item>2500</item>
-        <item>3000</item>
-        <item>4000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -81,23 +74,15 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>10</item>
-        <item>40</item>
-        <item>60</item>
-        <item>64</item>
-        <item>68</item>
-        <item>72</item>
-        <item>76</item>
+        <item>30</item>
         <item>80</item>
-        <item>84</item>
-        <item>88</item>
-        <item>92</item>
-        <item>96</item>
-        <item>100</item>
-        <item>130</item>
+        <item>105</item>
+        <item>135</item>
         <item>160</item>
-        <item>190</item>
-        <item>220</item>
+        <item>188</item>
+        <item>214</item>
+        <item>232</item>
+        <item>249</item>
         <item>255</item>
     </integer-array>
 
@@ -107,22 +92,15 @@
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
