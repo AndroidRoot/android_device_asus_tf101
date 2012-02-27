@@ -425,17 +425,9 @@ def WriteFullOTAPackage(input_zip, output_zip):
   else:
     script.UndoRetouchBinaries(retouch_files)
 
-  boot_img = common.GetBootableImage("boot.img", "boot.img",
-                                     OPTIONS.input_tmp, "BOOT")
+  prebuilt_path = os.path.join(DEV_OUT_DIR, "boot.img")
 
-  cmdblob = ["blobpack_tf", os.path.join(DEV_OUT_DIR,"boot.blob"), "LNX", os.path.join(DEV_OUT_DIR,"boot.img")]
-
-  pblob = common.Run(cmdblob, stdout=subprocess.PIPE)
-  pblob.communicate()
-  assert pblob.returncode == 0, "blobpack_tf of %s image failed" % (
-      os.path.basename(DEV_OUT_DIR),)
-
-  blob = common.File.FromLocalFile("boot.blob", os.path.join(DEV_OUT_DIR,"boot.blob"))
+  blob = common.File.FromLocalFile("boot.img", prebuilt_path)
 
   #recovery_img = common.GetBootableImage("recovery.img", "recovery.img",
   #                                       OPTIONS.input_tmp, "RECOVERY")
