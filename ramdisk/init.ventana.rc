@@ -23,7 +23,6 @@ on fs
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
     mount ext4 /dev/block/mmcblk0p7 /data wait noatime nodiratime nosuid nodev nodelalloc,errors=panic
     mount ext4 /dev/block/mmcblk0p2 /cache wait noatime nodiratime nosuid nodev nodelalloc,errors=panic
-    mount tmpfs tmpfs /Removable mode=0755,gid=1000
 
 on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi
