@@ -26,7 +26,7 @@
     <bool name="config_batterySdCardAccessibility">true</bool>
 
     <bool name="config_sf_limitedAlpha">false</bool>
- 
+
     <bool name="config_allowAllRotations">true</bool>
 
     <bool name="config_sf_slowBlur">true</bool>
@@ -35,11 +35,7 @@
 
     <string-array name="networkAttributes">
         <item>wifi,1,1,3,-1,true</item>
-        <item>mobile,0,0,0,-1,false</item>
-        <item>mobile_mms,2,0,5,60000,false</item>
-        <item>mobile_supl,3,0,5,60000,false</item>
         <item>bluetooth,7,7,2,-1,true</item>
-        <item>mobile_hipri,5,0,6,60000,false</item>
         <item>ethernet,9,9,4,-1,true</item>
         <item>bt_dun,14,14,2,-1,true</item>
         <item>wifi_p2p,13,1,0,-1,true</item>
