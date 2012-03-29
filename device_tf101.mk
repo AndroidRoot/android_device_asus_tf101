@@ -33,7 +33,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
     $(LOCAL_PATH)/ramdisk/init.ventana.rc:root/init.ventana.rc\
     $(LOCAL_PATH)/ramdisk/init.ventana.usb.rc:root/init.ventana.usb.rc \
-    $(LOCAL_PATH)/ramdisk/ueventd.ventana.rc:root/ueventd.ventana.rc
+    $(LOCAL_PATH)/ramdisk/ueventd.ventana.rc:root/ueventd.ventana.rc \
+    $(LOCAL_PATH)/ramdisk/init.ventana.keyboard.rc:root/init.ventana.keyboard.rc \
+    $(LOCAL_PATH)/prebuilt/keyswap::root/sbin/keyswap
 
 # Prebuilt configeration files
 PRODUCT_COPY_FILES += \
@@ -94,7 +96,8 @@ PRODUCT_PACKAGES += \
         audio.a2dp.default \
         libaudioutils \
 	libinvensense_mpl \
-        blobpack_tf
+        blobpack_tf \
+        AutoParts
 
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
