@@ -77,7 +77,10 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 527433728
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 29850022707
 BOARD_FLASH_BLOCK_SIZE := 4096
 
-# prebuilt Kernel
+# Try to build the kernel
+TARGET_KERNEL_CONFIG := cyanogen_tf101_defconfig
+
+# Prebuilt Kernel Fallback
 TARGET_PREBUILT_KERNEL := device/asus/tf101/kernel
 
 # Coustom Tools
