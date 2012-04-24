@@ -328,3 +328,7 @@ service ps3service /system/bin/ps3service
     group root
     disabled
     oneshot
+
+# bcmdhd module load
+insmod /system/lib/modules/bcmdhd.ko
+
