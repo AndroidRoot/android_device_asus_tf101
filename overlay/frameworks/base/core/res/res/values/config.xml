@@ -128,4 +128,7 @@
     <integer name="config_lidKeyboardAccessibility">2</integer>
 
     <bool name="config_hasDockBattery">true</bool>
+
+    <string name="config_deviceKeyHandlerLib">/system/framework/com.cyanogenmod.asusec.jar</string>
+    <string name="config_deviceKeyHandlerClass">com.cyanogenmod.asusec.KeyHandler</string>
 </resources>

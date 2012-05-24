@@ -54,6 +54,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/asusec.kl:system/usr/keylayout/asusec.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+# Localized input keychars and keylayout files
+$(call inherit-product, $(LOCAL_PATH)/keychars/l10n/l10n.mk)
+$(call inherit-product, $(LOCAL_PATH)/keylayout/l10n/l10n.mk)
+
 # Camera/WiFi/BT Firmware
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/nvram_4329.txt:system/etc/nvram_4329.txt \
@@ -79,7 +83,8 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/base/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
+    $(LOCAL_PATH)/asusec/com.cyanogenmod.asusec.xml:system/etc/permissions/com.cyanogenmod.asusec.xml
 
 # Build characteristics setting 
 PRODUCT_CHARACTERISTICS := tablet
@@ -97,7 +102,9 @@ PRODUCT_PACKAGES += \
         libaudioutils \
 	libinvensense_mpl \
         blobpack_tf \
-        AutoParts
+        AutoParts \
+	com.cyanogenmod.asusec \
+	libasusec_jni
 
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
