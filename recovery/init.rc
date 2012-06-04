@@ -33,6 +33,8 @@ service ueventd /sbin/ueventd
 
 service recovery /sbin/recovery
 
+service mischelp /sbin/mischelp /dev/block/platform/sdhci-tegra.3/by-name/MC
+
 service adbd /sbin/adbd recovery
   \ disabled
 

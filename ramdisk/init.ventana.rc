@@ -292,16 +292,16 @@ service flush-logs /system/bin/sh /data/data/com.asus.LogTool/files/flush-logs.s
 #on device-removed-/sys/block/sda
 #    umount /mnt/usbdrive
 
-# Recovery daemon: configure MSC partition
-#service recoveryd /system/bin/recoveryd /dev/block/platform/sdhci-tegra.3/by-num/p5
-#    disabled
-#    class main
-#    user root
-#    group root
-#    oneshot
+# configure MSC partition
+service mischelp /system/bin/mischelp /dev/block/platform/sdhci-tegra.3/by-name/MC boot-recovery
+    disabled
+    class main
+    user root
+    group root
+    oneshot
 
-#on property:sys.shutdown.requested=1recovery
-#    start recoveryd
+on property:sys.shutdown.requested=1recovery
+    start mischelp
 
 # Prepare TF service
 service tf_daemon /system/bin/tf_daemon -storageDir /data/tf -d

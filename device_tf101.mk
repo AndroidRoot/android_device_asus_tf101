@@ -104,7 +104,8 @@ PRODUCT_PACKAGES += \
         blobpack_tf \
         AutoParts \
 	com.cyanogenmod.asusec \
-	libasusec_jni
+	libasusec_jni \
+	mischelp
 
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
