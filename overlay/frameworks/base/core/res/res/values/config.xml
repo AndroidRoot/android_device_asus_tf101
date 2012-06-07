@@ -127,6 +127,8 @@
 
     <integer name="config_lidKeyboardAccessibility">2</integer>
 
+    <bool name="config_screenOffAnimation">false</bool>
+
     <bool name="config_hasDockBattery">true</bool>
 
     <string name="config_deviceKeyHandlerLib">/system/framework/com.cyanogenmod.asusec.jar</string>
