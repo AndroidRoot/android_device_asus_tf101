@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Configurações Asus Transformer (TF101)</string>
-    <string name="warning">Aviso</string>
-    <string name="caution_keyboard_layout">O dispositivo irá reiniciar para trocar a disposição do teclado de encaixe</string>
-    <string name="keyboard_language_title">Disposição do Teclado de Encaixe</string>
-    <string name="keyboard_language_summary">Modificar a disposição do teclado de encaixe</string>
-    <string name="dock_settings_title">Configurações de Encaixe</string>
-</resources>
