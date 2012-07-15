@@ -16,20 +16,20 @@ int main(int argc, char *argv[])
 
     if (argc < 2 || argc > 3){
         printf("\nUsage : %s <path of misc> <boot command>\n\n", LOG_TAG);
-        LOGE("ERROR : Usage : %s <path of misc> <boot command>\n", LOG_TAG);
+        ALOGE("ERROR : Usage : %s <path of misc> <boot command>\n", LOG_TAG);
         return 0;
     } else if (argc == 2) {
-        LOGI("Eraseing boot coommand to partition %s\n", argv[1]);
+        ALOGI("Eraseing boot coommand to partition %s\n", argv[1]);
     } else if (argc == 3) {
         strncpy(bootcom, argv[2], MAX_COM_LENGTH);
-        LOGI("Writeing boot coommand \"%s\" from partition \"%s\"\n", bootcom, argv[1]);
+        ALOGI("Writeing boot coommand \"%s\" from partition \"%s\"\n", bootcom, argv[1]);
     }
 
     FILE *f;
     f=fopen(argv[1], "wb");
     if (f == NULL) {
         fclose(f);
-        LOGE("ERROR : partition not found \"%s\"\n", argv[1]);
+        ALOGE("ERROR : partition not found \"%s\"\n", argv[1]);
         return 0;
     }
 
