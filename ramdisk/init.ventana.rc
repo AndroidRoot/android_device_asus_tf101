@@ -23,7 +23,7 @@ on early-init
 on fs
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
     setprop ro.crypto.umount_sd false
-	mount_all /fstab.ventana
+    mount_all /fstab.ventana
 
 on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi
