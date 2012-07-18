@@ -104,7 +104,8 @@ PRODUCT_PACKAGES += \
         libaudioutils \
 	libinvensense_mpl \
         blobpack_tf \
-	mischelp
+	mischelp \
+        audio.primary.ventana
 #        AutoParts \
 #	com.cyanogenmod.asusec \
 #	libasusec_jni \
