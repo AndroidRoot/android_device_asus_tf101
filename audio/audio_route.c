@@ -31,7 +31,7 @@
 #define MIXER_XML_PATH "/system/etc/mixer_paths.xml"
 #define INITIAL_MIXER_PATH_SIZE 8
 
-#define MIXER_CARD 1
+#define MIXER_CARD 0
 
 struct mixer_state {
     struct mixer_ctl *ctl;
