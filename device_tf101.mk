@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
 	libinvensense_mpl \
         blobpack_tf \
 	mischelp \
+        libaudioutils \
+        tinymix \
+        tinyplay \
+        tinyrec \
         audio.primary.ventana
 #        AutoParts \
 #	com.cyanogenmod.asusec \
