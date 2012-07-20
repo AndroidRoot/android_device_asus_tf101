@@ -41,4 +41,22 @@
             android:primary="true"
             android:emulated="true"
             android:mtpReserve="100" />
+    <!-- Micro SD card -->
+    <storage android:mountPoint="/storage/sdcard1"
+            android:storageDescription="@string/storage_sd_card"
+            android:removable="true"
+            android:maxFileSize="4096" />
+    <!-- Dock SD Card -->
+    <storage android:mountPoint="/storage/sdcard2"
+            android:storageDescription="Dock SD Card"
+            android:removable="true"
+            android:maxFileSize="4096" />
+    <!-- external USB drive -->
+    <storage android:mountPoint="/storage/usbdisk0"
+            android:storageDescription="USB Drive 1"
+            android:removable="true" />
+    <!-- external USB drive -->
+    <storage android:mountPoint="/storage/usbdisk1"
+            android:storageDescription="USB Drive 2"
+            android:removable="true" />
 </StorageList>
