@@ -95,16 +95,16 @@ on boot
 
 #GPS
     mkdir /data/gps
-    chown system system /data/gps
+    chown gps system /data/gps
     chmod 770 /data/gps
-    chown root system /dev/ttyHS1
+    chown gps system /dev/ttyHS1
     chmod 0664 /dev/ttyHS1
 
 # GPS init
     write /sys/class/gpio/export 203
     write /sys/class/gpio/gpio203/value 0
     write /sys/class/gpio/gpio203/direction out
-    chown root system /sys/class/gpio/gpio203/value
+    chown gps system /sys/class/gpio/gpio203/value
     chmod 0664 /sys/class/gpio/gpio203/value
 
 #NTFS exFAT support
@@ -216,8 +216,8 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --scopcm=0,2,0,0,0
 # Start GPS daemon
   on boot
   service gps-daemon /system/bin/glgps -c /system/etc/gps/gpsconfig.xml
-  user root
-  group root 
+  user gps
+  group system 
   class late_start
 
 # Mount usb drives as /usbdrive. Generally usb drives are formatted with FAT
