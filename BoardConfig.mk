@@ -54,6 +54,9 @@ BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
+#ICS Camera
+ICS_CAMERA_BLOB := true
+
 # Support for dock battery
 TARGET_HAS_DOCK_BATTERY := true
 
